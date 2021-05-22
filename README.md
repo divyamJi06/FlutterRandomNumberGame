@@ -8,4 +8,4 @@ I have also added a QR Scanner which will detect and give the QR results.
 
 
 If you want to contribute:
-Add your flutter game and I would love to commit.
+Add your flutter game and I would love to pull the code.
