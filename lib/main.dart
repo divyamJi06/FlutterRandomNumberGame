@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: {
           "/randomGame": (context) => MyHomePage(),
-          "/QRcode": (context) => QRScanner()
+          // "/QRcode": (context) => QRScanner()
         },
         title: 'Flutter Random Numbers Game',
         theme: ThemeData(
@@ -53,6 +53,7 @@ class _NewHomePageState extends State<NewHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             InkWell(
+                key: Key("gotogame"),
               onTap: () {
                 Navigator.pushNamed(context, "/randomGame");
               },
@@ -75,26 +76,26 @@ class _NewHomePageState extends State<NewHomePage> {
             SizedBox(
               height: 20,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, "/QRcode");
-              },
-              child: Container(
-                height: 60,
-                width: 350,
-                decoration: BoxDecoration(
-                    color: Colors.purple,
-                    borderRadius: BorderRadius.all(Radius.circular(25))),
-                alignment: Alignment.center,
-                child: Text(
-                  "QR Scanner",
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            )
+            // InkWell(
+            //   onTap: () {
+            //     Navigator.pushNamed(context, "/QRcode");
+            //   },
+            //   child: Container(
+            //     height: 60,
+            //     width: 350,
+            //     decoration: BoxDecoration(
+            //         color: Colors.purple,
+            //         borderRadius: BorderRadius.all(Radius.circular(25))),
+            //     alignment: Alignment.center,
+            //     child: Text(
+            //       "QR Scanner",
+            //       style: TextStyle(
+            //         fontSize: 25,
+            //         color: Colors.white,
+            //       ),
+            //     ),
+            //   ),
+            // )
           ],
         ),
       ),

@@ -6,10 +6,10 @@ import 'previousnumber.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
   int c = 0;
   String value;
   bool started = false;
@@ -29,6 +29,19 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     num = t;
     if (k > 1) generateRandom();
+  }
+
+  String checkForCorrectness(String data) {
+    if (data == num)
+      return "Fully Correct";
+    else {
+      for (int i = 0; i < 4; i++) {
+        if (num.indexOf(data[i]) != -1) {
+          return "Partially Correct";
+        }
+      }
+      return "Incorrect";
+    }
   }
 
   void _incrementCounter() {
